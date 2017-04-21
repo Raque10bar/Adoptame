@@ -1,0 +1,321 @@
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="app.com.example.android.adoptame.PetDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <app.com.example.android.adoptame.adapter.SquareImageView
+                android:id="@+id/detail_fragment_picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
+
+            <Button
+                android:id="@+id/contact_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="Contactar"/>
+
+            <LinearLayout
+                android:id="@+id/admin_buttons_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true">
+
+                <Button
+                    android:id="@+id/edit_button_petdetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Editar"/>
+
+                <Button
+                    android:id="@+id/delete_button_petdetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Borrar"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/separator"
+                android:textColor="@color/cyan"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_pet_detail_name"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textAllCaps="true"
+                android:paddingRight="5dp"/>
+
+            <TextView android:id="@+id/detail_fragment_name_textview"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/separator"
+                android:textColor="@color/cyan"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_pet_detail_sex"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView android:id="@+id/detail_fragment_gender_textview"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/separator"
+                android:textColor="@color/cyan"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_pet_detail_size"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView android:id="@+id/detail_fragment_size_textview"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/separator"
+                android:textColor="@color/cyan"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_pet_detail_age"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView android:id="@+id/detail_fragment_age_textview"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/separator"
+                android:textColor="@color/cyan"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_pet_detail_weight"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView android:id="@+id/detail_fragment_weight_textview"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/separator"
+                android:textColor="@color/cyan"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_pet_detail_species"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView android:id="@+id/detail_fragment_species_textview"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/separator"
+                android:textColor="@color/cyan"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_pet_detail_breed"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView android:id="@+id/detail_fragment_breed_textview"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/separator"
+                android:textColor="@color/cyan"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_pet_detail_description"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:paddingRight="5dp"
+                android:textAllCaps="true"/>
+
+            <TextView android:id="@+id/detail_fragment_description_textview"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

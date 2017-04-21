@@ -1,0 +1,39 @@
+CREATE DATABASE adoptame;
+  
+USE adoptame;
+
+CREATE TABLE IF NOT EXISTS `pets` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `picture` varchar(30) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  `gender` varchar(15) NOT NULL,
+  `size` varchar(15) DEFAULT NULL,
+  `age` varchar(20) DEFAULT NULL,
+  `weight` varchar(15) DEFAULT NULL,
+  `species` varchar(30) DEFAULT NULL,
+  `breed` varchar(25) NOT NULL,
+  `description` text,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `picture` (`picture`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `email` varchar(30) NOT NULL,
+  `encrypted_password` varchar(50) NOT NULL,
+  `salt` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+INSERT INTO `pets` (`id`, `picture`, `name`, `gender`, `size`, `age`, `weight`, `species`, `breed`, `description`) VALUES (1, '1.JPG', 'Rastreator', 'Macho', 'Pequeño', '5 meses', '2 kg', 'Perro', 'Beagle', 'Muy cariñoso.');
+
+INSERT INTO `pets` (`id`, `picture`, `name`, `gender`, `size`, `age`, `weight`, `species`, `breed`, `description`) VALUES (2, '2.JPG', 'Kata', 'Hembra', 'Grande', '7 años', '28 kg', 'Perro', 'Golden Retriever', 'Te roba las zapatillas.');
+
+INSERT INTO `pets` (`id`, `picture`, `name`, `gender`, `size`, `age`, `weight`, `species`, `breed`, `description`) VALUES (3, '3.JPG', 'Bigotes', 'Macho', 'Mediano', '3 años', '5 kg', 'Gato', '', 'Tiene mucha clase.');
+
+INSERT INTO `pets` (`id`, `picture`, `name`, `gender`, `size`, `age`, `weight`, `species`, `breed`, `description`) VALUES (4, '4.JPG', 'Paco', 'Macho', 'Mediano', '1 año', '2 kg', 'Otros', 'Hurón', 'Le gusta esconderse.');
+
+INSERT INTO `pets` (`id`, `picture`, `name`, `gender`, `size`, `age`, `weight`, `species`, `breed`, `description`) VALUES (5, '5.JPG', 'Manchas', 'Hembra', 'Grande', '4 años', '30 kg', 'Perro', 'Dálmata', 'Es buy tímida.');
+
+INSERT INTO `pets` (`id`, `picture`, `name`, `gender`, `size`, `age`, `weight`, `species`, `breed`, `description`) VALUES (6, '6.JPG', 'Pantera', 'Macho', 'Pequeño', '8 meses', '5 kg', 'Gato', 'Pardo', 'Te muerde los pies por las noches.');

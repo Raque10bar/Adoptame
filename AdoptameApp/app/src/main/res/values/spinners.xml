@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sex_spinner">
+        <item>Macho</item>
+        <item>Hembra</item>
+    </string-array>
+
+    <string-array name="size_spinner">
+        <item>Grande</item>
+        <item>Mediano</item>
+        <item>Pequeño</item>
+    </string-array>
+
+    <string-array name="species_spinner">
+        <item>Perro</item>
+        <item>Gato</item>
+        <item>Otros</item>
+    </string-array>
+
+
+</resources>

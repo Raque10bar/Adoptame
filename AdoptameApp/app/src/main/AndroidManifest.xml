@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.com.example.android.adoptame">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Login"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Register"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".PetList"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".PetDetail"
+            android:label="@string/title_activity_pet_detail"
+            android:parentActivityName=".PetList">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.com.example.android.adoptame.PetList" />
+            >
+        </activity>
+
+        <provider
+            android:name=".data.PetsProvider"
+            android:authorities="app.com.example.android.adoptame" />
+
+        <activity
+            android:name=".ChangePassword"
+            android:label="@string/title_activity_change_password"
+            android:parentActivityName=".PetList"
+            android:windowSoftInputMode="adjustResize">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.com.example.android.adoptame.PetList" />
+        </activity>
+        <activity
+            android:name=".ResetPassword"
+            android:label="@string/title_activity_reset_password"
+            android:parentActivityName=".Login"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.com.example.android.adoptame.Login" />
+        </activity>
+        <activity
+            android:name=".AddPet"
+            android:label="@string/title_activity_add_pet"
+            android:parentActivityName=".PetList"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.com.example.android.adoptame.PetList" />
+        </activity>
+
+        <activity
+            android:name=".EditPet"
+            android:label="@string/title_activity_edit_pet"
+            android:parentActivityName=".PetDetail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.com.example.android.adoptame.PetDetail"/>
+        </activity>
+    </application>
+
+</manifest>
